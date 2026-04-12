@@ -7,7 +7,6 @@ const paymentRoutes = require("./routes/paymentRoutes");
 const app = express();
 const adminRoutes = require("./routes/adminRoutes");
 
-
 /* ===============================
    MIDDLEWARE
 ================================ */
@@ -20,8 +19,6 @@ app.use(cors({
 app.use(express.json());
 app.use("/api/payments", paymentRoutes);
 app.use("/api/admin", adminRoutes);
-
-
 
 /* ===============================
    DATABASE CONNECTION
@@ -40,7 +37,7 @@ mongoose
    ROUTES
 ================================ */
 app.get("/", (req, res) => {
-  res.send("Sri Jai Krishna Music Academy Backend Running");
+  res.status(200).send("OK");
 });
 
 /* ===============================
